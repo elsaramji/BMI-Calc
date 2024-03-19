@@ -1,4 +1,3 @@
-import 'package:bmi_calc/Components/colors.dart';
 import 'package:bmi_calc/Widgets/HomePage.dart';
 import 'package:bmi_calc/data/dataType.dart';
 import 'package:flutter/material.dart';
