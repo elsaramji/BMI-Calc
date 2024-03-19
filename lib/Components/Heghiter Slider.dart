@@ -1,19 +1,18 @@
-import 'package:bmi_calc/consts/colors.dart';
+import 'package:bmi_calc/data/dataType.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'colors.dart';
 
-class Highit extends StatefulWidget {
-   int hightValue=120;
-  Highit({super.key});
-
+class TallSelector extends StatefulWidget {
+  TallSelector();
   @override
-  State<Highit> createState() => _HighitState();
+  State<TallSelector> createState() => _TallSelector();
 }
 
-class _HighitState extends State<Highit> {
-  
-
+class _TallSelector extends State<TallSelector> {
   @override
   Widget build(BuildContext context) {
+    final datatall = Provider.of<DataType>(context);
     return Container(
       width: double.infinity,
 
@@ -41,7 +40,7 @@ class _HighitState extends State<Highit> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "${widget.hightValue}",
+                "${datatall.tall}",
                 style: normalFont.copyWith(
                   fontSize: 25,
                   color: textW,
@@ -62,11 +61,9 @@ class _HighitState extends State<Highit> {
           Slider(
               min: 60,
               max: 210,
-              value: widget.hightValue.toDouble(),
+              value: datatall.tall.toDouble(),
               onChanged: (value) {
-                setState(() {
-                  widget.hightValue = value.toInt();
-                });
+                datatall.slide(value);
               }),
           const SizedBox(
             height: 20,
