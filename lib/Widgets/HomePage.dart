@@ -10,15 +10,13 @@ import 'package:provider/provider.dart';
 
 class AppHome extends StatefulWidget {
   const AppHome({super.key});
-
   @override
   State<AppHome> createState() => _AppHomeState();
 }
-
 class _AppHomeState extends State<AppHome> {
   @override
   Widget build(BuildContext context) {
-    final datapass = Provider.of<DataType>(context);
+    final datapass = Provider.of<DataProv>(context);
     return Scaffold(
       backgroundColor: background,
       appBar: Bar(),
@@ -44,26 +42,37 @@ class _AppHomeState extends State<AppHome> {
                     textData: "Female")
               ],
             ),
-
             const Spacer(
               flex: 1,
             ),
-
             TallSelector(),
             const Spacer(
               flex: 1,
             ),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SelectorsButtons(title: "Wieght", value: "40"),
-                SelectorsButtons(title: "Age", value: "15"),
+                SelectorsButtons(
+                  title: "Wieght",
+                  value: "${datapass.weight}",
+                  add: datapass.weidghtIncrement,
+                  munis: datapass.weidghtdecrement,
+                ),
+                SelectorsButtons(
+                  title: "Age",
+                  value: "${datapass.age}",
+                  add: datapass.ageIncrement,
+                  munis: datapass.agedecrement,
+                ),
               ],
             ),
             const Spacer(
               flex: 1,
             ),
-            CallPage(doing: () {})
+            CallPage(doing: () {
+              datapass.bmi_reslur();
+              Navigator.of(context).pushNamed("RESULT");
+            })
           ],
         ),
       ),

@@ -12,7 +12,7 @@ class TallSelector extends StatefulWidget {
 class _TallSelector extends State<TallSelector> {
   @override
   Widget build(BuildContext context) {
-    final datatall = Provider.of<DataType>(context);
+    final datatall = Provider.of<DataProv>(context);
     return Container(
       width: double.infinity,
 

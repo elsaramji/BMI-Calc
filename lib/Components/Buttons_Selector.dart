@@ -5,7 +5,13 @@ import 'package:flutter/material.dart';
 class SelectorsButtons extends StatefulWidget {
   final String title;
   final String value;
-  const SelectorsButtons({required this.title, required this.value});
+  final VoidCallback add;
+  final VoidCallback munis;
+  const SelectorsButtons( 
+      {required this.title,
+      required this.value,
+      required this.add,
+      required this.munis});
 
   @override
   State<SelectorsButtons> createState() => _SelectorsButtonsState();
@@ -44,7 +50,7 @@ class _SelectorsButtonsState extends State<SelectorsButtons> {
             children: [
               IconButton(
                 alignment: Alignment.center,
-                onPressed: () {},
+                onPressed: widget.add,
                 icon: const Icon(
                   Icons.add,
                   color: Colors.white,
@@ -53,7 +59,7 @@ class _SelectorsButtonsState extends State<SelectorsButtons> {
               ),
               IconButton(
                 alignment: Alignment.center,
-                onPressed: () {},
+                onPressed: widget.munis,
                 icon: const Icon(
                   Icons.minimize,
                   color: Colors.white,

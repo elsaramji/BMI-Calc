@@ -10,7 +10,7 @@ class CallPage extends StatelessWidget {
     return Padding(
         padding: const EdgeInsets.all(8.0),
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: doing,
           style: ElevatedButton.styleFrom(
               backgroundColor: buttons,
               shape: const RoundedRectangleBorder(
