@@ -1,8 +1,12 @@
 # bmi_calc
 
-A new Flutter project.
+A BMI Calc App 
 
 ## Getting Started
+
+
+https://github.com/elsaramji/BMI-Calc/assets/90051301/392aae85-ec66-4b98-bc7b-06272c8af074
+
 
 This project is a starting point for a Flutter application.
 
