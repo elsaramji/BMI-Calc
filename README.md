@@ -18,3 +18,16 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+
+
+# this sign in view only to admins.
+
+using firebases' authentication and collections.
+
+collection to who admin or user.
+
+and  adding call us function.
+
+![4.\_Login\_-\_Empty\_\_\_%D8%B4%D8%A7%D8%B4%D8%A9\_%D8%AA%D8%B3%D8%AC%D9%8A%D9%84\_%D8%AF%D8%AE%D9%88%D9%84.png](https://trello.com/1/cards/676a89a4e0a2cdae1c7d2929/attachments/676a8a07989930b15ac7a7f7/download/4._Login_-_Empty___%D8%B4%D8%A7%D8%B4%D8%A9_%D8%AA%D8%B3%D8%AC%D9%8A%D9%84_%D8%AF%D8%AE%D9%88%D9%84.png)
